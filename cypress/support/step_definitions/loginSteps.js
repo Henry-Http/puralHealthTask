@@ -21,6 +21,7 @@ Then("I should see an error message saying {string}", (errorText) => {
     .errorMessage()
     .should("be.visible")
     .and("contain", errorText);
+    cy.wait(200)
 });
 
 Then("I should see UI inconsistencies on the product page", () => {
